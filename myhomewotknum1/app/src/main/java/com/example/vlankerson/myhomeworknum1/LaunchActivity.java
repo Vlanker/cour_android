@@ -1,5 +1,6 @@
 package com.example.vlankerson.myhomeworknum1;
 
+import android.content.Intent;
 import android.support.annotation.StringRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class LaunchActivity extends AppCompatActivity {
+
     private EditText mText;
     private Button mEnter;
 
@@ -19,6 +21,10 @@ public class LaunchActivity extends AppCompatActivity {
         public void onClick(View view) {
             if (isTextValid()) {
                 showToast(mText.getText());
+                Intent startSecondIntent = new Intent(LaunchActivity.this, SecondActivity.class);
+                startSecondIntent.putExtra(SecondActivity.TEXT, mText.getText().toString());
+                startActivity(startSecondIntent);
+
             }
         }
     };
@@ -38,6 +44,8 @@ public class LaunchActivity extends AppCompatActivity {
 
         mText = findViewById(R.id.etText);
         mEnter = findViewById(R.id.btnEnter);
+
+        mEnter.setOnClickListener(mOnEnterClickListener);
 
     }
 }

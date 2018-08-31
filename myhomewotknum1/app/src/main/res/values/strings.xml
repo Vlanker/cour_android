@@ -2,4 +2,6 @@
     <string name="app_name">My Home Work num 1</string>
     <string name="et_hint">Enter text</string>
     <string name="btn_hint">Enter</string>
+    <string name="btn_click_hint">Click</string>
+
 </resources>
