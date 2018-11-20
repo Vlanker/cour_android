@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TheTask</string>
+    <string name="hint">Введите что-нибудь</string>
+    <string name="btn_to_Toast">Вывести</string>
+    <string name="tvOutput">TextView</string>
+    <string name="btnSecond">Найти в google.com</string>
+</resources>
